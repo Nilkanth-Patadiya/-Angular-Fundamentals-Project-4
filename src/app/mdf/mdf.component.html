@@ -1,0 +1,26 @@
+<div class="outer"><br>
+    <h1>This is Model Driven Form</h1>
+    <form [formGroup]="Employeedetails" (ngSubmit)="DisplayOnConsole()">
+        <pre>
+        <h3><u>Employee Details</u></h3>
+        <label>Enter Empno:</label>         <input formControlName="empno">
+        <label>Enter EmpName:</label>       <input formControlName="empname">
+        <div style="color: red;" *ngIf="Employeedetails.controls['empname'].hasError('required')">Name Can't be blank</div>
+        <label>Enter Age:</label>           <input formControlName="age">
+        <div formGroupName="AddressDetails" class="inner">
+        <b><u>Address Details</u></b><br>
+        <label>Enter House No:</label>      <input type="text" formControlName="houseno" >
+        <label>Enter Building Name:</label> <input type="text" formControlName="buildingname">
+        <label>Enter Street:</label>        <input type="text" formControlName="street">
+        <div style="color: red;" *ngIf="Employeedetails.controls['AddressDetails'].get('street').hasError('required')">Street Name cant be blank</div>
+        <div style="color: red;" *ngIf="Employeedetails.controls['AddressDetails'].get('street').hasError('maxlength')">Maximum length is 9</div>
+        <div style="color: red;" *ngIf="Employeedetails.controls['AddressDetails'].get('street').hasError('minlength')">Minimum lengh is 3</div>
+        <label>Enter City:</label>          <input type="text" formControlName="city">
+        <label>Enter PinCode:</label>       <input type="text" formControlName="pincode" >
+        <label>Enter Country:</label>       <input type="text" formControlName="country" >
+        </div>
+        <br><br>
+        <input type="submit">
+        </pre>
+    </form>
+</div>

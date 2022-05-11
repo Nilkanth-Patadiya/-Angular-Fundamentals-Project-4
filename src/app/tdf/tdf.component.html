@@ -1,0 +1,32 @@
+<div class="form">
+  <br>
+    <h1>This is Template Driven Form</h1>
+    <form #EmployeeDetailsForm = "ngForm" (ngSubmit)="DisplayOnConsole(EmployeeDetailsForm.value)">
+    <pre>
+    <h3><u>Employee Details</u></h3>
+    <label>Enter Empno:</label>         <input type="text" name="empno" ngModel>
+    <label>Enter EmpName:</label>       <input type="text" name="empname" required #nRf="ngModel" ngModel>
+    <div [hidden]="nRf.valid || nRf.pristine" style="color:red">Name Cannot be Blank..</div>
+    <label>Enter Age:</label>           <input type="text" name="age" ngModel>
+    </pre>
+  
+  <div ngModelGroup="AddressDetails" class="form2">
+    <pre>
+    <h4><u>Address Details</u></h4>
+    <label>Enter House No:</label>      <input type="text" name="houseno" ngModel>
+    <label>Enter Building Name:</label> <input type="text" name="buildingname" ngModel>
+    <label>Enter Street:</label>        <input type="text" #streetRef="ngModel" maxlength="7" minlength="3" required name="street" ngModel>
+    <div *ngIf="streetRef.errors && (streetRef.dirty || streetRef.touched)" style="color:red">
+      <div [hidden]="!streetRef.errors.required">Street Name cannot be Blank</div>
+      <div [hidden]="!streetRef.errors.minlength">Minimum Length is 3 Characters</div>
+      <div [hidden]="!streetRef.errors.maxlength">Maximum Length is 7 Characters</div>
+    </div>
+    <label>Enter City:</label>          <input type="text" name="city" ngModel>
+    <label>Enter PinCode:</label>       <input type="text" name="pincode" ngModel>
+    <label>Enter Country:</label>       <input type="text" name="country" ngModel>
+    <br><br>
+    <input type="submit">
+    </pre>
+    </div>
+    </form>
+  </div>

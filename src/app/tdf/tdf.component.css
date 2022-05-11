@@ -1,0 +1,17 @@
+div{
+    text-align: center;
+}
+.form{
+    background-color: #AD9820;
+    width: 100vh;
+    height: 120vh;
+    font-size: 15px;
+    margin: 0 auto;
+}
+
+.form2{
+    background-color: #5D6E69;
+    width: 100vh;
+    height: 80vh;
+    margin: 0 auto;
+}

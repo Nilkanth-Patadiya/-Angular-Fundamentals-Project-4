@@ -1,0 +1,17 @@
+div{
+    text-align: center;
+}
+.outer{
+    background-color:#AD9820;
+    width: 100vh;
+    height: 136vh;
+    font-size:15px;
+    margin: 0 auto;
+}
+
+.inner{
+    background-color:#5D6E69 ;
+    width: 100vh;
+    height: 60vh;
+    margin: 0 auto;
+}
