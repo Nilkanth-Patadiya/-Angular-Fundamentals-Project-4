@@ -1,5 +1,9 @@
 # My Fourth Angular Project
 
+Learning & Exploring Basics Of Forms In Angular, Such As:
+- Template Driven Forms (TDF)
+- Model Driven Forms (MDF)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
 ## Development server
